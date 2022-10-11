@@ -5,6 +5,8 @@ var banana,bananaImg;
 var crown,crowmImg;
 var sound1;
 var ground;
+let timer = 6
+
 
 
 
@@ -62,9 +64,18 @@ function SpawnBananas(){
     var banana = createSprite(600,100,40,20)
     banana.y = Math.round(random(100,150))
     banana.velocityX = -5
-    banana.lifeTime = 200
+    banana.lifetime = 200
     bananaGroup.add(banana)
-  }
+  } 
 
     
+}
+function time(){
+if(frameCount % 60 === 0 && timer > 0 ){
+
+}
+if (timer == 0 ){
+   text("game over" , 200,200)
+}
+
 }
